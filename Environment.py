@@ -70,8 +70,7 @@ class Environment(threading.Thread):
                 self.Brain.AddSummary(groupName + "-TotalReward", self.Step, accumulatedReward, groupName)
             
             # Output the state recording
-            # Attemp to save as PNG file
-            #fileName = "D:\\ForexDNN\\TensorFlow\\A3CForexTest\\images\\" + "frame_"+ str(self.MoveCounter) +".png" 
+            # Attemp to save as PNG file            
             #imsave(fileName, image)
             
             # If we are done - finish
@@ -84,8 +83,7 @@ class Environment(threading.Thread):
         # Print the total reward.
         print(datetime.now(), "ID=", self.ID, " Accumulated Episode Reward:", accumulatedReward)
      
-        # Save the episode run as gif file
-        # gifFileName = "D:\\ForexDNN\\TensorFlow\\A3CForexTest\\images\\images_" + str(self.ID) +"_" + str(self.EpisodeCount) + ".gif";
+        # Save the episode run as gif file        
         # write_gif(imagesRecording, gifFileName, fps=2)
 
     def run(self):
